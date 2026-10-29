@@ -15,6 +15,8 @@ app.get("/api/health", (req, res) => {
 app.get("/api/prices", (req, res) => {
     res.json({ currency: "PKR per kg", prices: prices });
 });
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, "0.0.0.0", () => {
     console.log(`SabziCart API listening on 127.0.0.1:${PORT}`);
 });
